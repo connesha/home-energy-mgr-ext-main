@@ -201,6 +201,10 @@ CREATE TABLE `solar_radiation_hourly` (
 - loads the actions to execute
 - executes them repeatedly after a configurable sleep interval
 
+It requires one argument: the path the plots (graphs pngs) will be outputted to. E.g.:
+```
+$ python3 ./main.py /usr/share/hassio/homeassistant/www
+```
 ## Actions
 Actions are tasks that can be executed. They can be executed independently, or chained together by adding pre/post actions.
 
