@@ -127,7 +127,7 @@ select * from solar_config;
 | forecast_sun_angle_max          | 4.7                                                  | float     | NULL                                                                            |
 | home_usage_base_load_wh         | 175                                                  | int       | NULL                                                                            |
 | home_usage_daily_wh             | 17000                                                | int       | NULL                                                                            |
-| log_level                       | info                                                 | string    | info / warning / error / critical                                               |
+| log_level                       | info                                                 | string    | info / debug / warning / error / critical                                               |
 | main_sleep_ranges_by_hour       | [[0, 10], [2, 60], [6, 10]]                          | list      | How many seconds to sleep for, by hour                                          |
 | plot_num_days_past_override     | -1                                                   | int       | How many days in the past to show in daily graph. -1 means default: window size |
 | sunrise_to_real_gen_mins        | 60                                                   | int       | How long after sunrise is there meangingful generation                          |
@@ -358,7 +358,7 @@ currently linked.
 
 # Important
 - This is a draft version, a work-in-progress, and things might not work as expected. **Be sure to step through and verify what is happening before just running it.**
-- The registers and their values are the ones that work for me. **Be sure to verify that they are suitable for you**, and that the values being set won't mess up your system. Especially these in [service_inverter.py](./services/service_inverter.py)__:
+- The registers and their values are the ones that work for me. **Be sure to verify that they are suitable for you**, and that the values being set won't mess up your system. Especially these in [service_inverter.py](./services/service_inverter.py):
 ```
 HR_CHARGE_LEVEL_ENABLE = 43110
 HR_CHARGE_CURRENT_DECI = 43141
